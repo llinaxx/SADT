@@ -20,3 +20,8 @@ class Feedback(BaseModel):
         if pattern.search(v):
             raise ValueError("Использование недопустимых слов")
         return v
+
+class UserResponse(BaseModel):
+    name: str
+    id: int
+    is_adult: bool = None
